@@ -530,10 +530,9 @@ img {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  transition-property:transform;
+  transition-property: transform;
   transition-duration: var(--transition-dur);
   transition-timing-function: var(--transition-func);
-
 
   width: 408px;
   min-height: 584px;
@@ -562,7 +561,7 @@ img {
   background-color: var(--portfolio-button);
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .close-button:hover,
@@ -573,15 +572,130 @@ img {
   border: none;
 }
 
-.close-button-icon{
-  transition-property:fill;
+.close-button-icon {
+  transition-property: fill;
   transition-duration: var(--transition-dur);
   transition-timing-function: var(--transition-func);
 }
 
-
 /* ================ Modal Window ===================== */
 
+/* ================ Modal window form ============== */
+
+.modal-title {
+  color: var(--second-text-color);
+  text-align: center;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+}
+
+.modal-field-wrapper {
+  margin-bottom: 8px;
+}
+
+.modal-field {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.48px;
+  color: var(--customers-border);
+
+  margin-bottom: 4px;
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.4));
+  color: var(--second-text-color);
+  font-size: 12px;
+  padding: 11px 38px;
+  outline: transparent;
+}
+
+.modal-input::placeholder {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.48px;
+  color: var(--second-text-color);
+}
+
+.modal-icon-wrapper {
+  position: relative;
+}
+
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-30%);
+}
+
+.modal-comment {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 8px 16px;
+  width: 100%;
+  height: 120px;
+  resize: none;
+
+  color: rgba(46, 47, 66, 0.4);
+  font-size: 12px;
+
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.48px;
+
+  border-radius: 4px;
+  border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.4));
+  outline: transparent;
+}
+
+.modal-comment::placeholder {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.48px;
+  color: var(--second-text-color);
+}
+
+.input-check {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  left: 0;
+  top: 0;
+}
+
+.checkbox-made {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+
+  border-radius: 2px;
+  border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.4));
+}
+.checkbox-made-icon {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.input-check:checked + .checkbox-label .checkbox-made {
+  border: 1px solid transparent;
+}
+
+.input-check:checked + .checkbox-label .checkbox-made-icon {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ================ Modal window form ============== */
 /* ===================== Portfolio ==================== */
 
 .portfolio {
@@ -643,13 +757,12 @@ img {
 
 .portfolio-link:hover,
 .portfolio-link:focus {
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-   
-  }
+}
 
 .portfolio-link:hover .portfolio-image-text,
-.portfolio-link:focus .portfolio-image-text{
+.portfolio-link:focus .portfolio-image-text {
   transform: translateY(0%);
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
@@ -683,22 +796,20 @@ img {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-    
-  }
+}
 
-.portfolio-overlay{
+.portfolio-overlay {
   position: relative;
   overflow: hidden;
   max-width: 360px;
-  border: transparent; 
-  
+  border: transparent;
+
   transition-property: background-color, border-color, box-shadow;
   transition-duration: var(--transition-dur);
   transition-timing-function: var(--transition-func);
-
 }
 
-.portfolio-image-text{
+.portfolio-image-text {
   position: absolute;
   top: 0;
   left: 0;
@@ -719,7 +830,7 @@ img {
   width: 100%;
 }
 
-.portfolio-image{
+.portfolio-image {
   display: block;
 }
 /* ===================== Portfolio =================== */
