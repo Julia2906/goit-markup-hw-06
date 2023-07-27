@@ -644,6 +644,8 @@ img {
   margin-left: 16px;
 }
 
+.footer-field {
+}
 /* ============== footer form =========== */
 
 /* ================ Modal window form ============== */
@@ -660,7 +662,7 @@ img {
 }
 
 .modal-field-wrapper {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .modal-field {
@@ -793,6 +795,10 @@ img {
   transition-property: background-color, border, fill;
   transition-duration: var(--transition-dur);
   transition-timing-function: var(--transition-func);
+}
+
+.checkbox-label .checkbox-made {
+  display: inline-flex;
 }
 .checkbox-made-icon {
   opacity: 0;
