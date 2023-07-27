@@ -660,7 +660,7 @@ img {
 }
 
 .modal-field-wrapper {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .modal-field {
@@ -767,7 +767,6 @@ img {
 
 .privacy-wrapper {
   position: relative;
-  margin-bottom: 16px;
   margin-bottom: 24px;
 }
 .input-check {
@@ -802,6 +801,9 @@ img {
 
 .input-check:checked + .checkbox-label .checkbox-made {
   border: 1px solid transparent;
+  background-color: var(--active-button);
+  border: none;
+  fill: var(--background-clor-grey);
 }
 
 .input-check:checked + .checkbox-label .checkbox-made-icon {
@@ -809,11 +811,6 @@ img {
   visibility: visible;
 }
 
-.input-check:checked > .checkbox-made {
-  background-color: var(--active-button);
-  border: none;
-  fill: var(--background-clor-grey);
-}
 .privacy-link {
   color: var(--global-color-blue);
 }
