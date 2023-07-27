@@ -503,6 +503,7 @@ img {
 /* ================ Modal Window ===================== */
 
 .modal {
+  
   position: fixed;
   left: 0;
   top: 0;
@@ -526,6 +527,7 @@ img {
 }
 
 .backdrop {
+  padding: 72px 24px 24px 24px;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -583,6 +585,7 @@ img {
 /* ================ Modal window form ============== */
 
 .modal-title {
+  margin-bottom: 16px;
   color: var(--second-text-color);
   text-align: center;
 
@@ -597,7 +600,7 @@ img {
 }
 
 .modal-field {
-  display: inline-block;
+  display: block;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.17;
@@ -615,7 +618,16 @@ img {
   color: var(--second-text-color);
   font-size: 12px;
   padding: 11px 38px;
-  outline: transparent;
+  background-color: transparent;
+
+  transition-property: border-color;
+  transition-duration: var(--transition-dur);
+  transition-timing-function: var(--transition-func);
+}
+
+.modal-input:hover,
+.modal-input:focus{
+  border-color: var(--global-color-blue);
 }
 
 .modal-input::placeholder {
@@ -634,7 +646,21 @@ img {
   position: absolute;
   top: 50%;
   left: 16px;
-  transform: translateY(-30%);
+  transform: translateY(-50%);
+
+  transition-property: fill;
+  transition-duration: var(--transition-dur);
+  transition-timing-function: var(--transition-func);
+  
+}
+
+.modal-input:hover + .modal-icon,
+.modal-input:focus + .modal-icon{
+  fill: var(--global-color-blue);
+}
+.modal-input:focus,
+.modal-comment:focus {
+  border-color: var(--global-color-blue);
 }
 
 .modal-comment {
@@ -645,7 +671,7 @@ img {
   height: 120px;
   resize: none;
 
-  color: rgba(46, 47, 66, 0.4);
+  color: var(--customers-border);
   font-size: 12px;
 
   font-weight: 400;
@@ -665,6 +691,9 @@ img {
   color: var(--second-text-color);
 }
 
+.privacy-wrapper{
+  position: relative;
+}
 .input-check {
   position: absolute;
   visibility: hidden;
@@ -678,8 +707,11 @@ img {
   width: 16px;
   height: 16px;
 
+  margin-right: 8px;
+
   border-radius: 2px;
   border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.4));
+
 }
 .checkbox-made-icon {
   opacity: 0;
@@ -695,6 +727,20 @@ img {
   visibility: visible;
 }
 
+.privacy-link{
+  color: var(--global-color-blue);
+}
+
+.checkbox-label{
+  display: flex;
+  align-items: center;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.48px;
+  text-decoration-line: underline;
+}
 /* ================ Modal window form ============== */
 /* ===================== Portfolio ==================== */
 
