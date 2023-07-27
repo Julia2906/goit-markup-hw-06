@@ -619,6 +619,7 @@ img {
   font-size: 12px;
   padding: 11px 38px;
   background-color: transparent;
+  outline: transparent;
 
   transition-property: border-color;
   transition-duration: var(--transition-dur);
@@ -671,7 +672,7 @@ img {
   height: 120px;
   resize: none;
 
-  color: var(--customers-border);
+  color: rgba(46, 47, 66, 0.4);
   font-size: 12px;
 
   font-weight: 400;
@@ -681,6 +682,11 @@ img {
   border-radius: 4px;
   border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.4));
   outline: transparent;
+
+  transition-property: border-color;
+  transition-duration: var(--transition-dur);
+  transition-timing-function: var(--transition-func);
+
 }
 
 .modal-comment::placeholder {
@@ -693,6 +699,7 @@ img {
 
 .privacy-wrapper{
   position: relative;
+  margin-bottom: 24px;
 }
 .input-check {
   position: absolute;
@@ -703,7 +710,11 @@ img {
 }
 
 .checkbox-made {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; 
+  fill: transparent;
+
   width: 16px;
   height: 16px;
 
@@ -712,6 +723,9 @@ img {
   border-radius: 2px;
   border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.4));
 
+  transition-property: background-color, border, fill;
+  transition-duration: var(--transition-dur);
+  transition-timing-function: var(--transition-func);
 }
 .checkbox-made-icon {
   opacity: 0;
@@ -727,6 +741,11 @@ img {
   visibility: visible;
 }
 
+.input-check:checked .checkbox-made{
+  background-color: var(--active-button);
+  border: none;
+  fill: var(--background-clor-grey);
+}
 .privacy-link{
   color: var(--global-color-blue);
 }
@@ -737,9 +756,32 @@ img {
 
   font-size: 12px;
   font-weight: 400;
-  line-height: 16px;
+  line-height: 1.17;
   letter-spacing: 0.48px;
+  color: var(--customers-border);
   text-decoration-line: underline;
+  
+}
+
+.modal-button{
+  display: block;
+  min-width: 169px;
+  height: 56px;
+
+  font-size: 16px;
+font-weight: 500;
+line-height: 1.5;
+letter-spacing: 0.64px;
+color: var(--background-color-white);
+cursor: pointer;
+background-color: var(--global-color-blue);
+border: none;
+border-radius: 4px;
+
+transition-property: background-color;
+  transition-duration: var(--transition-dur);
+  transition-timing-function: var(--transition-func);
+
 }
 /* ================ Modal window form ============== */
 /* ===================== Portfolio ==================== */
