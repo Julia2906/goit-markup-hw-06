@@ -579,7 +579,24 @@ img {
   transition-duration: var(--transition-dur);
   transition-timing-function: var(--transition-func);
 }
+/* ============== footer form =========== */
+.footer-subscribe-text{
+  margin-bottom: 16px;
 
+  font-size: 16px;
+font-weight: 500;
+line-height: 1.5;
+letter-spacing: 0.32px;
+
+color: var(--background-color-white);
+}
+
+.footer-subscribe-form{
+  display: flex;
+}
+
+
+/* ============== footer form =========== */
 /* ================ Modal Window ===================== */
 
 /* ================ Modal window form ============== */
