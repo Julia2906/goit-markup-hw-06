@@ -721,6 +721,11 @@ img {
   border-color: var(--global-color-blue);
 }
 
+.modal-input:hover,
+.modal-comment:hover {
+  border-color: var(--global-color-blue);
+}
+
 .modal-comment {
   display: inline-block;
   margin-top: 4px;
