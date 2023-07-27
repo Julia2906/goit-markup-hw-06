@@ -750,6 +750,7 @@ img {
   border-radius: 4px;
   border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.4));
   outline: transparent;
+  background-color: transparent;
 
   transition-property: border-color;
   transition-duration: var(--transition-dur);
@@ -766,7 +767,7 @@ img {
 
 .privacy-wrapper {
   position: relative;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 .input-check {
   position: absolute;
@@ -808,7 +809,7 @@ img {
   visibility: visible;
 }
 
-.input-check:checked .checkbox-made {
+.input-check:checked + .checkbox-made {
   background-color: var(--active-button);
   border: none;
   fill: var(--background-clor-grey);
