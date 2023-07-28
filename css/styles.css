@@ -733,8 +733,7 @@ img {
   border-radius: 2px;
   border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.4));
 
-  /* fill: transparent; */
-  transition-property: background-color, border, fill;
+  transition-property: background-color, border;
   transition-duration: var(--transition-dur);
   transition-timing-function: var(--transition-func);
 }
@@ -744,11 +743,9 @@ img {
   visibility: hidden;
 } */
 
-.input-check:checked + .checkbox-label .checkbox-made {
+.input-check:checked + .checkbox-label .checkbox-wrap {
   border: 1px solid transparent;
   background-color: var(--active-button);
-  /* border: none; */
-  fill: var(--background-clor-grey);
 }
 
 /* .input-check:checked + .checkbox-label .checkbox-made-icon {
