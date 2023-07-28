@@ -732,20 +732,20 @@ img {
 
   border-radius: 2px;
   border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.4));
-
-  transition-property: background-color, border;
+  fill: transparent;
+  transition-property: background-color, border, fill;
   transition-duration: var(--transition-dur);
   transition-timing-function: var(--transition-func);
 }
 
-/* .checkbox-made-icon {
-  opacity: 0;
-  visibility: hidden;
-} */
+.checkbox-made-icon {
+  fill: currentColor;
+}
 
 .input-check:checked + .checkbox-label .checkbox-wrap {
-  border: 1px solid transparent;
+  border: none;
   background-color: var(--active-button);
+  fill: var(--background-clor-grey);
 }
 
 /* .input-check:checked + .checkbox-label .checkbox-made-icon {
